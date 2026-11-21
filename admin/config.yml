@@ -40,3 +40,16 @@ collections:
         fields:
           - { label: Enlace de descarga (.zip), name: enlace, widget: string }
           - { label: Versión (por ejemplo Demo v0.1), name: version, widget: string }
+      - name: sobre
+        label: Sobre el juego
+        file: data/sobre.json
+        fields:
+          - { label: Descripción, name: descripcion, widget: text }
+          - { label: Enlace del tráiler de YouTube, name: trailer, widget: string, required: false }
+          - label: Características
+            name: caracteristicas
+            widget: list
+            summary: "{{fields.titulo}}"
+            fields:
+              - { label: Título, name: titulo, widget: string }
+              - { label: Texto, name: texto, widget: text }
