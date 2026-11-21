@@ -8,7 +8,7 @@
     },
     {
       "titulo": "Construí tu castillo",
-      "texto": "Bloques medievales, escaleras, losas, vallas, puertas y antorchas para darle vida a tu fortaleza."
+      "texto": "en esta demo encontraras bloques medievales, escaleras y losas listas para construir todo lo que imagines"
     },
     {
       "titulo": "Aldeas y ruinas",
@@ -16,15 +16,11 @@
     },
     {
       "titulo": "Sobreviví a la noche",
-      "texto": "Cuidá tu vida y tu hambre, y enfrentá a los zombis y a los hombres lobo."
-    },
-    {
-      "titulo": "Granja y cocina",
-      "texto": "Cultivá trigo, criá animales y cociná en el horno."
+      "texto": "Cuidá tu vida y tu hambre, y enfrentá a los zombis durante la noche"
     },
     {
       "titulo": "Tu partida",
-      "texto": "Guardá hasta 3 mundos, dormí en tu cama y guardá tus cosas en cofres."
+      "texto": "Guardá hasta 3 mundos"
     }
   ]
 }
