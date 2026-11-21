@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: maurii77/almenas-web
+  repo: mauri77/almenas-web
   branch: main
 
 locale: es
