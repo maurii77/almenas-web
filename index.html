@@ -69,30 +69,13 @@ footer{text-align:center;padding:1.5rem;font-size:.95rem;color:var(--piedra)}
 <main>
   <section id="novedades">
     <h2>Novedades</h2>
-    <div class="novedades">
-      <article class="novedad">
-        <h3>Llegó la primera versión oficial</h3>
-        <time datetime="2026-11-20">20 de noviembre de 2026</time>
-        <p>Escribí acá qué cambió: cama, cofres, cultivos, hombre lobo y mucho más.</p>
-      </article>
-      <article class="novedad">
-        <h3>La demo ya se puede jugar</h3>
-        <time datetime="2026-11-17">17 de noviembre de 2026</time>
-        <p>Publicamos la demo en itch.io. ¡Probala y contanos qué te pareció!</p>
-      </article>
-    </div>
+    <div class="novedades" id="lista-novedades"><p>Cargando novedades…</p></div>
   </section>
 
   <section id="galeria">
     <h2>Galería</h2>
-    <div class="galeria">
-      <figure><span>Captura 1</span></figure>
-      <figure><span>Captura 2</span></figure>
-      <figure><span>Captura 3</span></figure>
-      <figure><span>Captura 4</span></figure>
-      <figure><span>Captura 5</span></figure>
-      <figure><span>Captura 6</span></figure>
-    </div>
+    <div class="galeria" id="lista-galeria"></div>
+    <p id="galeria-vacia" hidden>Pronto vas a ver capturas del juego acá.</p>
   </section>
 </main>
 
@@ -106,5 +89,23 @@ footer{text-align:center;padding:1.5rem;font-size:.95rem;color:var(--piedra)}
 
 <footer>Hecho con cariño · Almenas</footer>
 
+
+<script>
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e};
+fetch('data/novedades.json').then(r=>r.json()).then(d=>{
+  const cont=document.getElementById('lista-novedades');cont.textContent='';
+  const items=(d.items||[]).slice().sort((a,b)=>String(b.fecha).localeCompare(String(a.fecha)));
+  if(!items.length){cont.append(el('p','','Todavía no hay novedades.'));return}
+  items.forEach(n=>{
+    const a=el('article','novedad');a.append(el('h3','',n.titulo));
+    const t=el('time','',new Date(n.fecha+'T12:00:00').toLocaleDateString('es-AR',{day:'numeric',month:'long',year:'numeric'}));
+    t.dateTime=n.fecha;a.append(t,el('p','',n.texto));cont.append(a)});
+}).catch(()=>{document.getElementById('lista-novedades').textContent='No se pudieron cargar las novedades.'});
+fetch('data/galeria.json').then(r=>r.json()).then(d=>{
+  const g=document.getElementById('lista-galeria');const im=d.imagenes||[];
+  if(!im.length){document.getElementById('galeria-vacia').hidden=false;return}
+  im.forEach(i=>{const f=el('figure');const m=document.createElement('img');m.src=i.imagen;m.alt=i.descripcion||'Captura de Almenas';m.loading='lazy';f.append(m);g.append(f)});
+}).catch(()=>{});
+</script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+backend:
+  name: github
+  repo: mauri77/almenas-web
+  branch: main
+
+locale: es
+media_folder: "img"
+public_folder: "/img"
+
+collections:
+  - name: contenido
+    label: Contenido de la página
+    files:
+      - name: novedades
+        label: Novedades
+        file: data/novedades.json
+        fields:
+          - label: Novedades
+            name: items
+            widget: list
+            summary: "{{fields.titulo}}"
+            fields:
+              - { label: Título, name: titulo, widget: string }
+              - { label: Fecha, name: fecha, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: Texto, name: texto, widget: text }
+      - name: galeria
+        label: Galería de capturas
+        file: data/galeria.json
+        fields:
+          - label: Imágenes
+            name: imagenes
+            widget: list
+            summary: "{{fields.descripcion}}"
+            fields:
+              - { label: Imagen, name: imagen, widget: image }
+              - { label: Descripción, name: descripcion, widget: string, required: false }
