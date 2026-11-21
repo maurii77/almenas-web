@@ -83,7 +83,8 @@ footer{text-align:center;padding:1.5rem;font-size:.95rem;color:var(--piedra)}
   <div style="max-width:68rem;margin:0 auto;padding:0 1.25rem">
     <h2>Descargar el juego</h2>
     <p>Para Windows. Descomprimí el .zip y abrí el juego, no hace falta instalar nada.</p>
-    <a class="boton" href="https://mauriii77.itch.io/almenas">Descargar</a>
+    <a class="boton" id="boton-descarga" href="#descargar">Descargar</a>
+    <p id="version-descarga" style="margin:1rem 0 0;font-size:.95rem;opacity:.8"></p>
   </div>
 </section>
 
@@ -105,6 +106,10 @@ fetch('data/galeria.json').then(r=>r.json()).then(d=>{
   const g=document.getElementById('lista-galeria');const im=d.imagenes||[];
   if(!im.length){document.getElementById('galeria-vacia').hidden=false;return}
   im.forEach(i=>{const f=el('figure');const m=document.createElement('img');m.src=i.imagen;m.alt=i.descripcion||'Captura de Almenas';m.loading='lazy';f.append(m);g.append(f)});
+}).catch(()=>{});
+fetch('data/descarga.json').then(r=>r.json()).then(d=>{
+  if(d.enlace)document.getElementById('boton-descarga').href=d.enlace;
+  if(d.version)document.getElementById('version-descarga').textContent='Versión: '+d.version;
 }).catch(()=>{});
 </script>
 </body>

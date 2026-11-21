@@ -34,3 +34,9 @@ collections:
             fields:
               - { label: Imagen, name: imagen, widget: image }
               - { label: Descripción, name: descripcion, widget: string, required: false }
+      - name: descarga
+        label: Descarga del juego
+        file: data/descarga.json
+        fields:
+          - { label: Enlace de descarga (.zip), name: enlace, widget: string }
+          - { label: Versión (por ejemplo Demo v0.1), name: version, widget: string }
