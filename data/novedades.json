@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "titulo": "Llegó la primera versión oficial",
-      "fecha": "2026-11-20",
-      "texto": "Escribí acá qué cambió: cama, cofres, cultivos, hombre lobo y mucho más."
-    },
-    {
-      "titulo": "La demo ya se puede jugar",
-      "fecha": "2026-11-17",
-      "texto": "Publicamos la demo en itch.io. ¡Probala y contanos qué te pareció!"
-    },
-    {
       "fecha": "2026-11-21",
       "titulo": "Juega la demo de Almenas ¡¡Totalmente gratis!!",
       "texto": "Ya está disponible la demo de Almenas, descargala y adentrate en un mundo infinito.\nal ser una demo puede contener bugs, si es así, reportalos"
