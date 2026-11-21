@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Almenas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Alegreya:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cielo:#6fa8d6; --cielo-bajo:#b9d8ef;
+  --piedra-oscura:#33373d; --piedra:#5d626b; --piedra-clara:#d6d9de;
+  --pasto:#4f7f33; --estandarte:#8c2f39; --texto:#23262b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Alegreya',Georgia,serif;font-size:1.15rem;line-height:1.6;color:var(--texto);background:var(--piedra-clara)}
+h1,h2,h3,.boton{font-family:'Pixelify Sans','Courier New',monospace}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--estandarte);outline-offset:3px}
+
+/* Portada */
+.portada{position:relative;background:linear-gradient(var(--cielo),var(--cielo-bajo));text-align:center;padding:5rem 1.25rem 11rem;overflow:hidden}
+.portada h1{margin:0;font-size:clamp(2.6rem,9vw,5.5rem);line-height:1;color:#fff;text-shadow:4px 4px 0 var(--piedra-oscura)}
+.portada p{max-width:34rem;margin:1.25rem auto 2rem;font-size:1.3rem;color:var(--piedra-oscura)}
+.castillo{position:absolute;left:0;right:0;bottom:0;height:7rem;background:var(--piedra-oscura);
+  clip-path:polygon(0 100%,0 40%,4% 40%,4% 25%,8% 25%,8% 40%,12% 40%,12% 10%,16% 10%,16% 0,19% 0,19% 10%,23% 10%,23% 40%,40% 40%,40% 55%,60% 55%,60% 40%,77% 40%,77% 10%,81% 10%,81% 0,84% 0,84% 10%,88% 10%,88% 40%,92% 40%,92% 25%,96% 25%,96% 40%,100% 40%,100% 100%)}
+.pasto{position:absolute;left:0;right:0;bottom:0;height:1.5rem;background:var(--pasto);border-top:4px solid #3d6527}
+
+/* Botón con aspecto de bloque */
+.boton{display:inline-block;padding:.8rem 2rem;font-size:1.5rem;font-weight:700;text-decoration:none;color:#fff;background:var(--piedra);
+  border:4px solid var(--piedra-oscura);box-shadow:inset 4px 4px 0 rgba(255,255,255,.35),inset -4px -4px 0 rgba(0,0,0,.35)}
+.boton:hover{background:var(--estandarte)}
+.boton:active{box-shadow:inset 4px 4px 0 rgba(0,0,0,.35),inset -4px -4px 0 rgba(255,255,255,.2)}
+
+/* Secciones */
+main{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+section{padding:3.5rem 0}
+h2{font-size:2.2rem;margin:0 0 1.5rem;color:var(--piedra-oscura)}
+
+.novedades{display:grid;gap:1.25rem}
+.novedad{background:#fff;border-left:10px solid var(--estandarte);padding:1.1rem 1.4rem}
+.novedad h3{margin:0;font-size:1.5rem}
+.novedad time{font-size:.95rem;color:var(--piedra)}
+.novedad p{margin:.5rem 0 0;max-width:42rem}
+
+.galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem}
+.galeria figure{margin:0;border:4px solid var(--piedra-oscura);background:var(--piedra);aspect-ratio:16/9;display:grid;place-items:center;color:#fff;font-family:'Pixelify Sans',monospace}
+.galeria img{width:100%;height:100%;object-fit:cover;display:block}
+
+.descarga{background:var(--piedra-oscura);color:#fff;text-align:center;border-top:6px solid var(--pasto)}
+.descarga h2{color:#fff}
+.descarga p{max-width:32rem;margin:0 auto 1.75rem}
+footer{text-align:center;padding:1.5rem;font-size:.95rem;color:var(--piedra)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="portada">
+  <h1>Almenas</h1>
+  <p>Construí, explorá y sobreviví en un mundo medieval hecho de bloques.</p>
+  <a class="boton" href="#descargar">Descargar</a>
+  <div class="castillo" aria-hidden="true"></div>
+  <div class="pasto" aria-hidden="true"></div>
+</header>
+
+<main>
+  <section id="novedades">
+    <h2>Novedades</h2>
+    <div class="novedades">
+      <article class="novedad">
+        <h3>Llegó la primera versión oficial</h3>
+        <time datetime="2026-11-20">20 de noviembre de 2026</time>
+        <p>Escribí acá qué cambió: cama, cofres, cultivos, hombre lobo y mucho más.</p>
+      </article>
+      <article class="novedad">
+        <h3>La demo ya se puede jugar</h3>
+        <time datetime="2026-11-17">17 de noviembre de 2026</time>
+        <p>Publicamos la demo en itch.io. ¡Probala y contanos qué te pareció!</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="galeria">
+      <figure><span>Captura 1</span></figure>
+      <figure><span>Captura 2</span></figure>
+      <figure><span>Captura 3</span></figure>
+      <figure><span>Captura 4</span></figure>
+      <figure><span>Captura 5</span></figure>
+      <figure><span>Captura 6</span></figure>
+    </div>
+  </section>
+</main>
+
+<section id="descargar" class="descarga">
+  <div style="max-width:68rem;margin:0 auto;padding:0 1.25rem">
+    <h2>Descargar el juego</h2>
+    <p>Para Windows. Descomprimí el .zip y abrí el juego, no hace falta instalar nada.</p>
+    <a class="boton" href="https://mauriii77.itch.io/almenas">Descargar</a>
+  </div>
+</section>
+
+<footer>Hecho con cariño · Almenas</footer>
+
+</body>
+</html>
