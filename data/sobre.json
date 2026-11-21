@@ -1,12 +1,30 @@
 {
   "descripcion": "Almenas es un juego de aventura y construcción en 3D, hecho de bloques y ambientado en un mundo medieval. Explorá mundos infinitos, levantá tu propio castillo, cultivá, cociná y sobreviví a las noches.",
-  "trailer": "",
+  "trailer": "https://www.youtube.com/watch?v=K3tf6zm8kXE",
   "caracteristicas": [
-    {"titulo": "Mundos infinitos", "texto": "Explorá bosques, llanuras, desiertos y bosques de cerezos, con ríos, lagos y cuevas."},
-    {"titulo": "Construí tu castillo", "texto": "Bloques medievales, escaleras, losas, vallas, puertas y antorchas para darle vida a tu fortaleza."},
-    {"titulo": "Aldeas y ruinas", "texto": "Encontrá aldeas, torres y ruinas de castillos mientras recorrés el mundo."},
-    {"titulo": "Sobreviví a la noche", "texto": "Cuidá tu vida y tu hambre, y enfrentá a los zombis y a los hombres lobo."},
-    {"titulo": "Granja y cocina", "texto": "Cultivá trigo, criá animales y cociná en el horno."},
-    {"titulo": "Tu partida", "texto": "Guardá hasta 3 mundos, dormí en tu cama y guardá tus cosas en cofres."}
+    {
+      "titulo": "Mundos infinitos",
+      "texto": "Explorá bosques, llanuras, desiertos y bosques de cerezos, con ríos, lagos y cuevas."
+    },
+    {
+      "titulo": "Construí tu castillo",
+      "texto": "Bloques medievales, escaleras, losas, vallas, puertas y antorchas para darle vida a tu fortaleza."
+    },
+    {
+      "titulo": "Aldeas y ruinas",
+      "texto": "Encontrá aldeas, torres y ruinas de castillos mientras recorrés el mundo."
+    },
+    {
+      "titulo": "Sobreviví a la noche",
+      "texto": "Cuidá tu vida y tu hambre, y enfrentá a los zombis y a los hombres lobo."
+    },
+    {
+      "titulo": "Granja y cocina",
+      "texto": "Cultivá trigo, criá animales y cociná en el horno."
+    },
+    {
+      "titulo": "Tu partida",
+      "texto": "Guardá hasta 3 mundos, dormí en tu cama y guardá tus cosas en cofres."
+    }
   ]
 }
