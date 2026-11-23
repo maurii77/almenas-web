@@ -153,7 +153,7 @@ fetch('data/novedades.json').then(r=>r.json()).then(d=>{
 fetch('data/galeria.json').then(r=>r.json()).then(d=>{
   const g=document.getElementById('lista-galeria');const im=d.imagenes||[];
   if(!im.length){document.getElementById('galeria-vacia').hidden=false;return}
-  im.forEach(i=>{const f=el('figure');const m=document.createElement('img');m.src=i.imagen;m.alt=i.descripcion||'Captura de Almenas';m.loading='lazy';f.append(m);g.append(f)});
+  im.forEach(i=>{const f=el('figure');const m=document.createElement('img');m.src=i.imagen.replace(/^\//,'');m.alt=i.descripcion||'Captura de Almenas';m.loading='lazy';f.append(m);g.append(f)});
 }).catch(()=>{});
 fetch('data/descarga.json').then(r=>r.json()).then(d=>{
   if(d.enlace)document.getElementById('boton-descarga').href=d.enlace;
